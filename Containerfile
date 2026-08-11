@@ -3,7 +3,7 @@ FROM ghcr.io/containerpak/mesa:main
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends ca-certificates curl desktop-file-utils libfuse2t64 && \
+    apt-get install -y --no-install-recommends ca-certificates curl desktop-file-utils libfuse2t64 libnss3 && \
     curl -fsSL https://github.com/dbgate/dbgate/releases/download/v7.2.0/dbgate-7.2.0-linux_x86_64.AppImage \
       -o /tmp/dbgate.AppImage && \
     echo '261b645daa4fc37e37da4c85f76c54f4d7e685ce5216635a335c76ee9a6c0042  /tmp/dbgate.AppImage' | sha256sum -c - && \
