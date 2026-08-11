@@ -1,0 +1,3 @@
+#!/bin/sh
+export APPDIR=/opt/dbgate
+exec /opt/dbgate/AppRun "$@"

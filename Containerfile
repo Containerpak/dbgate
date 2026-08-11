@@ -10,7 +10,6 @@ RUN apt-get update && \
     chmod +x /tmp/dbgate.AppImage && \
     cd /tmp && ./dbgate.AppImage --appimage-extract && \
     mv /tmp/squashfs-root /opt/dbgate && \
-    ln -s /opt/dbgate/AppRun /usr/bin/dbgate && \
     install -Dm644 /opt/dbgate/dbgate.desktop /usr/share/applications/org.dbgate.DbGate.desktop && \
     desktop-file-edit --set-key=Exec --set-value='dbgate %U' \
       /usr/share/applications/org.dbgate.DbGate.desktop && \
@@ -18,3 +17,5 @@ RUN apt-get update && \
       /usr/share/applications/org.dbgate.DbGate.desktop && \
     find /opt/dbgate/usr/share/icons/hicolor -type f -name 'dbgate.png' -exec sh -c 'size=$(basename "$(dirname "$(dirname "$1")")"); install -Dm644 "$1" "/usr/share/icons/hicolor/$size/apps/org.dbgate.DbGate.png"' _ {} \; && \
     cpak-clean-junk
+
+COPY dbgate /usr/bin/dbgate
