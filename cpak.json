@@ -3,7 +3,7 @@
   "manifest_version": "3.0",
   "name": "DbGate",
   "description": "Manage SQL and NoSQL databases with one desktop client.",
-  "version": "7.2.5",
+  "version": "7.2.6",
   "image": "ghcr.io/containerpak/dbgate@sha256:fc57f83f6fe3dac8a13819019569137af315a33fe79af8fc95ff6373847b877c",
   "binaries": [
     "/usr/bin/dbgate"
