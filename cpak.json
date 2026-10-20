@@ -4,7 +4,7 @@
   "name": "DbGate",
   "description": "Manage SQL and NoSQL databases with one desktop client.",
   "version": "7.2.6",
-  "image": "ghcr.io/containerpak/dbgate@sha256:7b00c8c058a250019c114651aad81cac49a1fec3f021204e35c7a48373cf9e0d",
+  "image": "ghcr.io/containerpak/dbgate@sha256:433fc000731b9418e98871f5cfde77059fc2abace2f9cbcc872767bb4a908181",
   "binaries": [
     "/usr/bin/dbgate"
   ],
